@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "requiem-2022": {
+      "hosting": {
+        "requiem-web-app": [
+          "requiem-2022"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "requiem-2022"
+  }
+}

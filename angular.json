@@ -94,6 +94,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "requiem-web-app:build:production",
+            "firebaseProject": "requiem-2022",
+            "firebaseHostingSite": "requiem-2022"
+          }
         }
       }
     }

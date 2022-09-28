@@ -1,0 +1,12 @@
+.logo-main{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    height: 50px;
+    width: 50px;
+}
+.logo-main:hover{
+    height: 52px;
+    width: 52px;
+    cursor: pointer;
+}

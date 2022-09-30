@@ -31,15 +31,21 @@ export class LoginComponent implements OnInit {
   async login(){
 
   const user = await this.authService.login(this.credentials.value);
-
-
+  const verifiedUser=user?.user.emailVerified;
     if(user)
     {
-      this.router.navigateByUrl('/home', {replaceUrl: true});
+      if(verifiedUser == true)
+      {
+        this.router.navigateByUrl('/home', {replaceUrl: true});
+      }
+      else
+      {
+        this.router.navigateByUrl('/verify-email', {replaceUrl: true});
+      }
     }
     else
     {
-      console.log('Login Failed', 'Please Try Again!');
+      alert("Invalid Credentials");
     }
   }
   routeToMain(){

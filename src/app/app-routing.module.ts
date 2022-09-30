@@ -7,6 +7,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { MainComponent } from './pages/main/main.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { SuccessEmailSentComponent } from './pages/success-email-sent/success-email-sent.component';
+import { VerifyEmailComponent } from './pages/verify-email/verify-email.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
 const redirectLoggedInToHome = () => redirectLoggedInTo(['home']);
@@ -41,7 +42,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'verify-email', component: ForgotPasswordComponent,
+    path: 'verify-email', component: VerifyEmailComponent,
     ...canActivate(redirectUnauthorizedToLogin)
   },
 

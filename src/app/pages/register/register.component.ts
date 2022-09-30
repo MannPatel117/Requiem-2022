@@ -31,11 +31,11 @@ export class RegisterComponent implements OnInit {
     }
     
   async register(){
-  
-    const user = await this.authService.register(this.credentials.value); 
+ 
+    const user = await this.authService.register(this.credentials.value, this.nmimsStudent); 
     if(user)
     {
-      this.router.navigateByUrl('/home', {replaceUrl: true});
+      this.router.navigateByUrl('/verify-email', {replaceUrl: true});
     }
     else
     {

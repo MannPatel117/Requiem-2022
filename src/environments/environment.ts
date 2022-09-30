@@ -10,6 +10,7 @@ export const environment = {
     apiKey: 'AIzaSyAI6bqATPvaLsHaBFmcsKpCyjgUxYcNc6U',
     authDomain: 'requiem-2022.firebaseapp.com',
     messagingSenderId: '165002072766',
+    databaseURL: 'https://requiem-2022-default-rtdb.asia-southeast1.firebasedatabase.app'
   },
   production: false
 };

@@ -24,7 +24,7 @@ export class VerifyEmailComponent implements OnInit {
   sendVerificationEmail(){
     const user= this.auth.currentUser;
     this.authService.sendEmailForVerification(user);
-    this.router.navigateByUrl('/success-email-sent');
+    this.router.navigateByUrl('/verification-email-sent', {replaceUrl: true});
   }
   routeToMain(){
     this.router.navigateByUrl('/main');

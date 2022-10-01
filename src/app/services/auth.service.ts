@@ -79,7 +79,7 @@ export class AuthService {
   sendEmailForVerification(user : any){
     sendEmailVerification(user).then((res:any)=>
     {
-      this.router.navigateByUrl('/success-email-sent', {replaceUrl: true});
+      this.router.navigateByUrl('/verification-email-sent', {replaceUrl: true});
     },(err:any) =>{
       alert(err.message);
     });

@@ -8,6 +8,7 @@ import { MainComponent } from './pages/main/main.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { SuccessEmailSentComponent } from './pages/success-email-sent/success-email-sent.component';
 import { VerifyEmailComponent } from './pages/verify-email/verify-email.component';
+import { VerificationEmailSentComponent } from './pages/verification-email-sent/verification-email-sent.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
 const redirectLoggedInToHome = () => redirectLoggedInTo(['home']);
@@ -49,6 +50,11 @@ const routes: Routes = [
   {
     path: 'success-email-sent', component: SuccessEmailSentComponent,
     ...canActivate(redirectLoggedInToHome)
+  },
+
+  {
+    path: 'verification-email-sent', component: VerificationEmailSentComponent,
+    ...canActivate(redirectUnauthorizedToLogin)
   }
 ];
 

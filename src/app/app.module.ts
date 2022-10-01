@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VerifyEmailComponent } from './pages/verify-email/verify-email.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { SuccessEmailSentComponent } from './pages/success-email-sent/success-email-sent.component';
+import { VerificationEmailSentComponent } from './pages/verification-email-sent/verification-email-sent.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SuccessEmailSentComponent } from './pages/success-email-sent/success-em
     MainComponent,
     VerifyEmailComponent,
     ForgotPasswordComponent,
-    SuccessEmailSentComponent
+    SuccessEmailSentComponent,
+    VerificationEmailSentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 {
   "hosting": {
-    "target": "requiem-web-app",
-    "public": "dist/requiem-web-app",
+    "target": "requiem-3",
+    "public": "dist/requiem-3",
     "ignore": [
       "**/.*"
     ],

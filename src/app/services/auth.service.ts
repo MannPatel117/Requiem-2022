@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
-import { docData, Firestore, setDoc} from '@angular/fire/firestore';
+import { collection, collectionData, docData, Firestore, setDoc, updateDoc} from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { Database, set, ref, update } from '@angular/fire/database';
 import { getAuth } from 'firebase/auth';
 import { doc } from 'firebase/firestore';
+
 
 @Injectable({
   providedIn: 'root'
@@ -85,10 +86,13 @@ export class AuthService {
     });
   } 
 
-  getUserById(id: string){
-    const userDocRef = doc(this.firestore, `users/${id}`);
-    return docData(userDocRef, {idField: 'id'} );
+  getTicket(){
+    const ticketsData= doc(this.firestore, 'tickets/ReqTkt3000');
+    return docData(ticketsData);
   }
-  
+  updateTicket(ticketsLeft:any){
+    const ticketsUpdate = doc(this.firestore, 'tickets/ReqTkt3000');
+    return updateDoc(ticketsUpdate, {tickets_left: ticketsLeft});
+  }
   
 }

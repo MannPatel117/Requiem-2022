@@ -1,0 +1,13 @@
+.home-page-1{
+  height: 60vh;
+  width: 100vw;
+  background-color: #004456;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.home-page-2{
+  height: 140vh;
+  width: 100vw;
+  background-color: #1A1A1A;
+}

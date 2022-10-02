@@ -1,14 +1,14 @@
 {
   "targets": {
-    "requiem-2022": {
+    "requiem-3": {
       "hosting": {
-        "requiem-web-app": [
-          "requiem-2022"
+        "requiem-3": [
+          "requiem-3"
         ]
       }
     }
   },
   "projects": {
-    "default": "requiem-2022"
+    "default": "requiem-3"
   }
 }

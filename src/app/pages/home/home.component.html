@@ -1,2 +1,16 @@
-<p>home works!</p>
-<button (click)="logout()">Logout</button>
+
+
+<section class="home-page-1">
+    <div class="text-wrap"><h1>Hello {{this.name}}</h1></div>
+    <a href="/home#check">Check</a>
+    <h1 style="color: white;"> Tickets Remaining : {{this.ticketsLeft}}</h1>
+    <div class="buttons-wrap">
+        <button (click)="buyTicket()">Buy Ticket</button>
+    </div>
+</section>
+<section class="home-page-2"><button style="color: white;" (click)="logout()">Logout</button></section>
+<section class="home-page-1">
+    <div class="text-wrap"><h1>Hello {{this.name}}</h1></div>
+    <div class="buttons-wrap"></div>
+</section>
+<section id="check" class="home-page-2"><button style="color: white;" (click)="logout()">Logout</button></section>

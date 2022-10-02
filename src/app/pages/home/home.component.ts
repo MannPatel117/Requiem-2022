@@ -50,14 +50,17 @@ export class HomeComponent implements OnInit {
     await this.authService.logout();
     this.router.navigateByUrl('/', {replaceUrl:true});
   }
-  buyTicket(){
-    this.authService.getTicket().subscribe(res =>{
-      this.ticketsLeft=res['tickets_left']; 
-    });
-    this.updateTicket();
-  }
+  // buyTicket(){
+  //   this.authService.getTicket().subscribe(res =>{
+  //     this.ticketsLeft=res['tickets_left']; 
+  //   });
+  //   this.updateTicket();
+  // }
 
-  updateTicket(){
-    this.authService.updateTicket(this.ticketsLeft-1);
+  // updateTicket(){
+  //   this.authService.updateTicket(this.ticketsLeft-1);
+  // }
+  buyTicket(){
+    this.authService.ticketUpdateFinal();
   }
 }

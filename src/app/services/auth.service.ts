@@ -4,7 +4,8 @@ import { collection, collectionData, docData, Firestore, setDoc, updateDoc} from
 import { Router } from '@angular/router';
 import { Database, set, ref, update } from '@angular/fire/database';
 import { getAuth } from 'firebase/auth';
-import { doc } from 'firebase/firestore';
+import { doc, runTransaction, Transaction } from 'firebase/firestore';
+
 
 
 @Injectable({
@@ -90,9 +91,32 @@ export class AuthService {
     const ticketsData= doc(this.firestore, 'tickets/ReqTkt3000');
     return docData(ticketsData);
   }
-  updateTicket(ticketsLeft:any){
+  updateTicket(){
     const ticketsUpdate = doc(this.firestore, 'tickets/ReqTkt3000');
-    return updateDoc(ticketsUpdate, {tickets_left: ticketsLeft});
+    // return updateDoc(ticketsUpdate, {tickets_left: ticketsLeft});
   }
-  
+  async ticketUpdateFinal(){
+    const ticketsData= doc(this.firestore, 'tickets/ReqTkt3000');
+    try{
+      await runTransaction(this.firestore, async (Transaction)=>
+      {
+        const ReqTkt3000Doc = await Transaction.get(ticketsData);
+        if(!ReqTkt3000Doc.exists())
+        {
+          throw alert("ERROR");
+        }  
+        const tickets_leftUpdate = ReqTkt3000Doc.data()['tickets_left'] - 1;
+        Transaction.update(ticketsData, {tickets_left:tickets_leftUpdate});
+      });
+      console.log('Successfull');
+    } 
+    catch(e)
+    {
+      console.log("Transaction Failed : ", e);
+    }
+  }
 }
+
+
+
+

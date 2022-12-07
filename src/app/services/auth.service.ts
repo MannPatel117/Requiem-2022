@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
-import { collection, collectionData, docData, Firestore, setDoc, updateDoc} from '@angular/fire/firestore';
+import { docData, Firestore, setDoc, updateDoc} from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { Database, set, ref, update } from '@angular/fire/database';
-import { getAuth } from 'firebase/auth';
+
 import { doc, runTransaction, Transaction } from 'firebase/firestore';
 
 
@@ -87,14 +87,8 @@ export class AuthService {
     });
   } 
 
-  getTicket(){
-    const ticketsData= doc(this.firestore, 'tickets/ReqTkt3000');
-    return docData(ticketsData);
-  }
-  updateTicket(){
-    const ticketsUpdate = doc(this.firestore, 'tickets/ReqTkt3000');
-    // return updateDoc(ticketsUpdate, {tickets_left: ticketsLeft});
-  }
+
+  // StarNight1 Ticket Update
   async ticketUpdateFinal(){
     const ticketsData= doc(this.firestore, 'tickets/ReqTkt3000');
     try{

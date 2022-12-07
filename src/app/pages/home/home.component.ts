@@ -41,9 +41,7 @@ export class HomeComponent implements OnInit {
       }
       console.log(this.nmimsStudent);
     });
-    this.authService.getTicket().subscribe(res =>{
-      this.ticketsLeft=res['tickets_left'];
-    });
+    
   }
   async logout()
   {

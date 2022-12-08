@@ -4,12 +4,13 @@
 
 export const environment = {
   firebase: {
-    apiKey: "AIzaSyBrqRxlOFJQkOk11xHREFMvilrJxlW1oio",
-    authDomain: "requiem-3.firebaseapp.com",
-    projectId: "requiem-3",
-    storageBucket: "requiem-3.appspot.com",
-    messagingSenderId: "670627893044",
-    appId: "1:670627893044:web:cb0c0ebc5fd265c0c05f61"
+    apiKey: "AIzaSyBtM5mjWr_sCH4E-cC7e7TdqeyMkUKbZvo",
+    authDomain: "requiem-app.firebaseapp.com",
+    projectId: "requiem-app",
+    storageBucket: "requiem-app.appspot.com",
+    messagingSenderId: "1020680709131",
+    appId: "1:1020680709131:web:452712edd6f061ac00d30e",
+    measurementId: "G-T28NQCWSFX"
   },
   production: false
 };

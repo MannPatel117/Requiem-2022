@@ -1,14 +1,5 @@
 {
-  "targets": {
-    "requiem-3": {
-      "hosting": {
-        "requiem-3": [
-          "requiem-3"
-        ]
-      }
-    }
-  },
   "projects": {
-    "default": "requiem-3"
+    "default": "requiem-app"
   }
 }

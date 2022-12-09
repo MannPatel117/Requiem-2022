@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 import { docData, Firestore, setDoc, updateDoc} from '@angular/fire/firestore';
 import { Router } from '@angular/router';
-import { Database, set, ref, update } from '@angular/fire/database';
-
-import { doc, runTransaction, Transaction } from 'firebase/firestore';
+import { Database, set, ref, update, provideDatabase } from '@angular/fire/database';
+import { Observable } from 'rxjs';
+import { doc, runTransaction, collection, addDoc, Transaction } from 'firebase/firestore';
 
 
 

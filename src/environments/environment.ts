@@ -3,13 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 export const environment = {
   firebase: {
-    apiKey: "AIzaSyBtM5mjWr_sCH4E-cC7e7TdqeyMkUKbZvo",
-    authDomain: "requiem-app.firebaseapp.com",
-    projectId: "requiem-app",
-    storageBucket: "requiem-app.appspot.com",
-    messagingSenderId: "1020680709131",
-    appId: "1:1020680709131:web:452712edd6f061ac00d30e",
-    measurementId: "G-T28NQCWSFX"
+    projectId: 'requiem-3',
+    appId: '1:670627893044:web:cb0c0ebc5fd265c0c05f61',
+    databaseURL: 'https://requiem-3-default-rtdb.firebaseio.com',
+    storageBucket: 'requiem-3.appspot.com',
+    locationId: 'us-central',
+    apiKey: 'AIzaSyBrqRxlOFJQkOk11xHREFMvilrJxlW1oio',
+    authDomain: 'requiem-3.firebaseapp.com',
+    messagingSenderId: '670627893044',
   },
   production: false
 };

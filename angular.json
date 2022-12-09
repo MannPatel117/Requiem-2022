@@ -101,8 +101,8 @@
             "prerender": false,
             "ssr": false,
             "browserTarget": "requiem-web-app:build:production",
-            "firebaseProject": "requiem-2022",
-            "firebaseHostingSite": "requiem-2022"
+            "firebaseProject": "requiem-3",
+            "firebaseHostingSite": "requiem-3"
           }
         }
       }

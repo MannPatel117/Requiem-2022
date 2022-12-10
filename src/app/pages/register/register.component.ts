@@ -14,7 +14,14 @@ export class RegisterComponent implements OnInit {
     private router: Router) 
     { }
 
-    
+    classicalSolo: number;
+    bollywoodSolo: number;
+    battleOfBands: number;
+    westernSolo: number;
+    powerOfInstruments: number;
+    underground: number;
+    starNight: number;
+    afterHours: number;
     get name(){
       return this.credentials.get('name');
     }
@@ -28,11 +35,19 @@ export class RegisterComponent implements OnInit {
     nmimsStudent=1;
     ngOnInit() {
       this.nmimsSelected();
+      this.classicalSolo = 0;
+      this.battleOfBands = 0;
+      this.bollywoodSolo = 0;
+      this.westernSolo = 0;
+      this.powerOfInstruments = 0;
+      this.underground = 0;
+      this.starNight = 0;
+      this.afterHours = 0;
     }
     
   async register(){
  
-    const user = await this.authService.register(this.credentials.value, this.nmimsStudent); 
+    const user = await this.authService.register(this.credentials.value, this.nmimsStudent, this.classicalSolo, this.bollywoodSolo, this.battleOfBands, this.westernSolo, this.powerOfInstruments, this.underground, this.starNight, this.afterHours);
     if(user)
     {
       this.router.navigateByUrl('/verify-email', {replaceUrl: true});

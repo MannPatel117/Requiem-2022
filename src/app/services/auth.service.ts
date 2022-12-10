@@ -23,8 +23,7 @@ export class AuthService {
   ngOnInit(){
     console.log(this.database.app)
   }
-  async register ({name,email,password}:any, nmimsStudent: number)
-  {
+  async register ({name,email,password}:any, nmimsStudent: number, classicalSolo: number, bollywoodSolo: number, battleOfBands: number, westernSolo: number, powerOfInstruments: number, underground: number, starNight: number, afterHours: number)  {
     try{
       const user = await createUserWithEmailAndPassword(
         this.auth,
@@ -37,6 +36,15 @@ export class AuthService {
         name: name,
         email: email,
         isNmims: nmimsStudent,
+        classicalSolo: classicalSolo,
+        bollywoodSolo: bollywoodSolo,
+        battleOfBands: battleOfBands,
+        westernSolo: westernSolo,
+        powerOfInstruments: powerOfInstruments,
+        underground: underground,
+        starNight: starNight,
+        afterHours: afterHours
+
       });
       this.router.navigateByUrl('/verify-email', {replaceUrl: true});
       return user;
